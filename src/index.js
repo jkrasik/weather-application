@@ -18,14 +18,14 @@ class App extends Component {
 
   getWeather(city) {
     console.log(city)
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&mode=json&appid=${API_KEY}&units=metric`)
+    fetch(`//api.openweathermap.org/data/2.5/weather?q=${city}&mode=json&appid=${API_KEY}&units=metric`)
     .then(response => response.json())
     .then(data => this.setState( { cityWeather: data }));
   }
 
   getWeatherForecast(city) {
     console.log(city)
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&appid=${API_KEY}&units=metric`)
+    fetch(`//api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&appid=${API_KEY}&units=metric`)
     .then(response => response.json())
     .then(data => this.setState( { forecast: data }));
     console.log(this.state)
